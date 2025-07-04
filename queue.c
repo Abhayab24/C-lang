@@ -1,26 +1,27 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX_SIZE 100
-int queue [MAX_SIZE];
-int rear=-1;
-void enqueue (int value)
+
+int queue[MAX_SIZE];
+int rear = -1;
+
+void enqueue(int value)
 {
-    if(rear>=MAX_SIZE -1)
+    if (rear >= MAX_SIZE - 1)
     {
         printf("Queue overflow!\n");
     }
-    else{
-        rear++;
-        queue[rear]=value;
-        printf("%d inserted into queue.\n",value);
-
-    }
-    int main()
+    else
     {
-        enqueue(10);
-        enqueue(20);
-        
-
+        rear++;
+        queue[rear] = value;
+        printf("%d inserted into queue.\n", value);
     }
+}
+
+int main()
+{
+    enqueue(10);
+    enqueue(20);
+    return 0;
 }
